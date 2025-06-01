@@ -10,39 +10,18 @@ Bu proje, bilgisayar mühendisliği stajım sırasında geliştirdiğim basit bi
 
 ## 🚀 Özellikler
 
-- ✅ Kitap ekleme formu
-- ✅ Kitap adı tekrar kontrolü (aynı kitap birden fazla kez eklenemez)
-- ✅ PDO ile güvenli veritabanı bağlantısı
-- ✅ Form doğrulama (boş alan kontrolü, yılın sayı olması)
-- ✅ Hata ve durum mesajları
+| Özellik                    | Açıklama                                                              |
+|----------------------------|-----------------------------------------------------------------------|
+| ✅ Kitap Ekleme Formu      | Kullanıcılar kitap bilgilerini forma yazar                            |
+| ✅ Aynı Kitap Kontrolü     | Aynı kitap daha önce eklendiyse sistem uyarı verir                    |
+| ✅ Güvenli PDO Kullanımı   | SQL Injection’a karşı korumalı PDO altyapısı                          |
+| ✅ Form Doğrulama          | Boş alanlar ve yıl değeri kontrol edilir                              |
+| ✅ Hata ve Başarı Mesajları| Kullanıcıya sistemden doğru geri bildirim sağlanır                    |
 
 ## 📁 Dosya Yapısı
 
+```text
 kütüphane-sistemi/
-│
-├── kitap_giris.php # Form verilerini işleyip veritabanına kaydeder
-└── README.md # Proje açıklaması
-
-
-## 🧪 Kurulum ve Çalıştırma
-1.MySQL'de bir veritabanı oluşturun.
-''' sql 
-CREATE DATABASE library;
-
-2.Aşağıdaki tabloyu oluşturun.
-CREATE TABLE books (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  kitap_adi VARCHAR(255),
-  kitap_konu VARCHAR(255),
-  kitap_ozet TEXT,
-  kitap_yil INT
-);
-
-3.Projeyi bir PHP sunucusuna yükleyin (örneğin: XAMPP, MAMP, WAMP).
-
-4.kitap_giris.php dosyasını tarayıcıda açarak formu test edin.
-
-5.Giriş yaptıktan sonra başarıyla eklenen kitapları kitap.php sayfasında görüntüleyebilirsiniz.
-
-
-
+├── kitap_giris.php   --> Kitap ekleme işlemlerini yapan sayfa
+├── kitap.php         --> Kitapların listelendiği veya yönlendirildiği sayfa
+└── README.md         --> Proje açıklamalarını içeren dosya
