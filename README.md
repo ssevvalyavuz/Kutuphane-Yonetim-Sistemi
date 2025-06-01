@@ -32,10 +32,15 @@ Aşağıdaki adımları izleyerek projeyi kendi bilgisayarınızda çalıştıra
 2. **books Tablosunu Oluşturun**
    ```sql```
    CREATE TABLE books (
+   
   id INT AUTO_INCREMENT PRIMARY KEY,
+  
   kitap_adi VARCHAR(255),
+  
   kitap_konu VARCHAR(255),
+  
   kitap_ozet TEXT,
+  
   kitap_yil INT
 );
   ```sql```
@@ -46,8 +51,11 @@ Aşağıdaki adımları izleyerek projeyi kendi bilgisayarınızda çalıştıra
 4.**Veritabanı Bağlantı Ayarlarını Güncelleyin**
   ```php```
 $host = "localhost";
+
 $username = "root";
+
 $password = "";
+
 $database = "library";
   ```php```
   
